@@ -84,6 +84,7 @@ function Todo() {
                   onClick={() => {
                     // e.preventDefault();
                     dispatch(deleteAsyncData({ id: item.id }));
+                    console.log(id);
                   }}
                 >
                   delete
