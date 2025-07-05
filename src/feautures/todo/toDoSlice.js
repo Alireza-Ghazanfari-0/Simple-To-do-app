@@ -10,7 +10,8 @@ export const addAsyncData = createAsyncThunk(
   "todo/addAsyncData",
   async (payload, { rejectWithValue }) => {
     try {
-      const response = await axios.post("http://localhost:9000/todos", {
+      // const response = await axios.post("http://localhost:9000/todos", {
+      const response = await axios.post("https://json-server-repo-for-to-do-app.onrender.com/todos", {
         id: Date.now(),
         title: payload,
         completed: false,
@@ -28,7 +29,8 @@ export const getAsyncData = createAsyncThunk(
   "todo/getAsyncData",
   async (_, { rejectWithValue }) => {
     try {
-      const response = await axios.get("http://localhost:9000/todos");
+      // const response = await axios.get("http://localhost:9000/todos");
+      const response = await axios.get("https://json-server-repo-for-to-do-app.onrender.com/todos");
       //   console.log(response.data);
       return response.data;
     } catch (error) {
@@ -44,7 +46,8 @@ export const toggleAsyncData = createAsyncThunk(
       //   console.log(payload);
 
       const response = await axios.patch(
-        `http://localhost:9000/todos/${payload.id}`,
+        // `http://localhost:9000/todos/${payload.id}`, 
+        `https://json-server-repo-for-to-do-app.onrender.com/todos/${payload.id}`,
         {
           completed: payload.completed,
         }
@@ -63,6 +66,7 @@ export const deleteAsyncData = createAsyncThunk(
     try {
       const { data } = await axios.delete(
         `http://localhost:9000/todos/${payload.id}`
+        `https://json-server-repo-for-to-do-app.onrender.com/todos/${payload.id}`
       );
       console.log(data);
 
