@@ -65,7 +65,7 @@ export const deleteAsyncData = createAsyncThunk(
   async (payload, { rejectWithValue }) => {
     try {
       const { data } = await axios.delete(
-        `http://localhost:9000/todos/${payload.id}`
+        // `http://localhost:9000/todos/${payload.id}`
         `https://json-server-repo-for-to-do-app.onrender.com/todos/${payload.id}`
       );
       console.log(data);
