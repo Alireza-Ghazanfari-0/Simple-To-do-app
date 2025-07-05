@@ -1,0 +1,93 @@
+#root {
+  /* max-width: 1280px; */
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.todo-container {
+  width: 50vw;
+  border: 1px solid rgba(16, 9, 77, 0.836);
+  border-radius: 10px;
+  padding: 1rem;
+}
+.form-title {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.todo-list {
+  margin-top: 20px;
+}
+.input-todo {
+  width: 100%;
+  height: 40px;
+}
+.input-and-button {
+  position: relative;
+  width: 100%;
+}
+.button1 {
+  position: absolute;
+  right: 5px;
+  top: 4px;
+  height: calc(100% - 10px);
+  /* padding-left: 10px;
+  padding-right: 10px; */
+  background-color: rgb(255, 113, 47);
+  color: aliceblue;
+  border: 1px solid black;
+  border-radius: 12px;
+  padding-top: 0.3rem;
+}
+
+.todo-list {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+}
+.todo-items-0 {
+  width: 90%;
+}
+.todo-items {
+  display: flex;
+  flex-direction: row;
+
+  border: 1px solid orangered;
+  border-radius: 5px;
+  margin-top: 10px;
+
+  min-height: 45px;
+  /* vertical-align: middle; */
+  justify-content: flex-start; /* افقی: آیتم‌ها در ابتدا قرار گیرند */
+  align-items: center; /* عمودی: آیتم‌ها در مرکز قرار گیرند */
+}
+.first-item {
+  width: 10%;
+  /* align-items: start; */
+  /* text-align: left; */
+}
+.second-item {
+  /* align-items: start; */
+  text-align: left;
+  width: 60%;
+}
+.third-item {
+  /* align-items: start; */
+  /* text-align: left; */
+  width: 30%;
+  cursor: pointer;
+}
+.Counter {
+  margin-left: auto;
+  margin-right: auto;
+  width: 30vw;
+  margin-top: 30px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+.button2 {
+  background-color: rgb(224, 69, 103);
+  margin-bottom: 1rem;
+  color: azure;
+}
